@@ -151,61 +151,61 @@
     </style>
 </head>
 <body>
-    <nav>
-        <ul style="display: block;">
-            <li><a href="#home" class="nav-btn">home</a></li>
-            <li><a href="#about" class="nav-btn">about</a></li>
-            <li><a href="#member" class="nav-btn">member</a></li>
-            <li><a href="#seminar" class="nav-btn">seminar</a></li>
-            <li><a href="#lecture" class="nav-btn">lecture</a></li>
-            <li><a href="#project" class="nav-btn">project</a></li>
-        </ul>
-        <a href="#" id="trigger">WiSoft</a>
-    </nav>
-    <section id="home" class="page1">
-        <h2>WiSoft.io</h2>
-    </section>
-    <section id="about" class="page2">
-        <h2>about</h2>
-    </section>
-    <section id="member" class="page3">
-        <h2>member</h2>
-    </section>
-    <section id="seminar" class="page4">
-        <h2>seminar</h2>
-    </section>
-    <section id="lecture" class="page5">
-        <h2>lecture</h2>
-    </section>
-    <section id="project" class="page6">
-        <h2>project</h2>
-    </section>
+<nav>
+    <ul style="display: block;">
+        <li><a href="#home" class="nav-btn">home</a></li>
+        <li><a href="#about" class="nav-btn">about</a></li>
+        <li><a href="#member" class="nav-btn">member</a></li>
+        <li><a href="#seminar" class="nav-btn">seminar</a></li>
+        <li><a href="#lecture" class="nav-btn">lecture</a></li>
+        <li><a href="#project" class="nav-btn">project</a></li>
+    </ul>
+    <a href="#" id="trigger">WiSoft</a>
+</nav>
+<section id="home" class="page1">
+    <h2>WiSoft.io</h2>
+</section>
+<section id="about" class="page2">
+    <h2>about</h2>
+</section>
+<section id="member" class="page3">
+    <h2>member</h2>
+</section>
+<section id="seminar" class="page4">
+    <h2>seminar</h2>
+</section>
+<section id="lecture" class="page5">
+    <h2>lecture</h2>
+</section>
+<section id="project" class="page6">
+    <h2>project</h2>
+</section>
 
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <scrip src="js/jquery.scrollTo.min.js"></scrip>
-    <script>
-        $(function () {
-            var trigger = $('#trigger');
-            var menu = $('nav ul');
-            $(trigger).on('click', function (e) {
-                e.preventDefault();
-                menu.slideToggle();
-            });
-            $(window).resize(function () {
-                var w = $(window).width();
-                if (w > 320 && menu.is(':hidden')) {
-                    menu.removeAttr('style');
-                }
-            });
+<script src="js/jquery-2.2.4.min.js"></script>
+<scrip src="js/jquery.scrollTo.min.js"></scrip>
+<script>
+    $(function () {
+        var trigger = $('#trigger');
+        var menu = $('nav ul');
+        $(trigger).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
         });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
 
-        $(function (){
-            $('nav a').click(function (e){
-                $.scrollTo(this.hash || 0,1500);
-                e.preventDefault();
-            });
+    $(function (){
+        $('nav a').click(function (e){
+            $.scrollTo(this.hash || 0,1500);
+            e.preventDefault();
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
