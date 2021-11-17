@@ -189,6 +189,17 @@ section:nth-child(odd) {
   border:1px solid #aaa;  
 }
 
+@media screen and (min-width:764px){
+  .program-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .program{
+    flex-basis: 30%;
+  }
+}
+
 
 /* 푸터 */
 .footer {
@@ -216,12 +227,12 @@ section:nth-child(odd) {
   color: #8292a3;
 }
 
-/*적용이 안됨 사이트에서 !!!!*/
-@media screen and(min-width:764px){
+/*적용이 안됨 사이트에서 !!!!* -> and 뒤 min-width 띄어쓰기 잘해야한다........*/
+@media screen and (min-width:764px) {
   .footer-info{
-    max-width: 1300px;
+    max-width:1300px;
     display:flex;
-    align-items: center;
+    align-items: flex-end;
   }
   .contact{
     flex:1;
