@@ -123,6 +123,10 @@ html.fp-enabled,
 .fp-slidesNav.top {
     top: 17px;
 }
+.fp-nav ul li{
+    text-align: center;
+}
+
 #fp-nav ul,
 .fp-slidesNav ul {
   margin: 0;
