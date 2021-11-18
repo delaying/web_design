@@ -225,6 +225,7 @@ section:nth-child(odd) {
 }
 .copyright{
   color: #8292a3;
+  margin-right: -150px;
 }
 
 /*적용이 안됨 사이트에서 !!!!* -> and 뒤 min-width 띄어쓰기 잘해야한다........*/
