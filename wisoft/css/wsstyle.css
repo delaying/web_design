@@ -170,33 +170,6 @@ section:nth-child(odd) {
   }
 }
 
-/* 교육 프로그램 영역 */
-.program-list {
-  padding: 20px 50px;
-}
-.program-list h4 {
-  font-size: 1.3em;
-  margin-bottom: 20px;
-}
-.program {
-  padding: 30px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  background-color: #fff;
-  border: 1px solid #aaa;
-}
-
-@media screen and (min-width: 764px) {
-  .program-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .program {
-    flex-basis: 30%;
-  }
-}
-
 /* 푸터 */
 .footer {
   padding-top: 10px;
@@ -264,3 +237,31 @@ nav ul li ul li {
   width: 100%;
   display: block;
 }
+
+
+/*!* 교육 프로그램 영역 *!*/
+/*.program-list {*/
+/*  padding: 20px 50px;*/
+/*}*/
+/*.program-list h4 {*/
+/*  font-size: 1.3em;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+/*.program {*/
+/*  padding: 30px;*/
+/*  box-sizing: border-box;*/
+/*  margin-bottom: 20px;*/
+/*  background-color: #fff;*/
+/*  border: 1px solid #aaa;*/
+/*}*/
+
+/*@media screen and (min-width: 764px) {*/
+/*  .program-list {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-around;*/
+/*  }*/
+/*  .program {*/
+/*    flex-basis: 30%;*/
+/*  }*/
+/*}*/
