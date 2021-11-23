@@ -44,6 +44,10 @@
 <!--풀페이지 만들기-->
 <div id="fullpage">
 
+    <div class="backimage section" >
+
+<!--        <img src="image/universe1280.jpg">-->
+    </div>
     <!-- 왜 코딩 교육 : 좌우 2개 항목 -->
     <div class="section">
         <div class="wrapper">
@@ -100,8 +104,7 @@
         </div>
     </div>
 
-    <!-- 교육 프로그램 : 한 줄에 여러 항목 -->
-    <!--한줄에 썸네일이 여러개 안들어감 수정바람 미래의나~~-->
+    <!-- 교육 프로그램  -->
     <div class="section">
         <div class="wrapper">
             <header class="section-title">
@@ -200,6 +203,7 @@
 
         </div>
     </div>
+
 </div>
 
 
@@ -212,10 +216,13 @@
                 <div class="footer-image">
                     <a href="#"><img src="image/wisoftlogo.png" width="50px" height="50px"></a>
                 </div>
-                <p> WiSoft.lab</p>
-                <p> location, 한밭대학교 n5동 503호 무선통신소프트웨어연구실 </p>
-                <p> contact, +82 042-821-1595 </p>
-                <p> For more information, mail to 20171655@edu.hanbat.ac.kr </p>
+                <div>
+                    <p> WiSoft.lab</p>
+                    <p> location, 한밭대학교 n5동 503호 무선통신소프트웨어연구실 </p>
+                    <p> contact, +82 042-821-1595 </p>
+                    <p> For more information, mail to 20171655@edu.hanbat.ac.kr </p>
+                </div>
+
 
             </div>
 
@@ -230,7 +237,6 @@
 <script src="js/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fullpage.js"></script>
-
 
 <script>
     $(function () {
@@ -248,6 +254,12 @@
         $("#fullpage").fullpage();
     });
 
+
 </script>
 </body>
 </html>
+
+
+<!--11/24-->
+<!--문제점 : pullpage효과를 적용했더니 footer가 사라졌음.-->
+<!--구현을 바라는 기능 : nav글자색 움직일때 바뀌기 -->
