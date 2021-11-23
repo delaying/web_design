@@ -40,18 +40,12 @@
     <a href="#" id="trigger"><img src="image/wisoftlogo.png" width="50px" height="50px"></a>
 </nav>
 
-<!-- 헤더 -->
-<section>
-    <div class="wrapper">
-
-    </div>
-</section>
 
 <!--풀페이지 만들기-->
 <div id="fullpage">
 
     <!-- 왜 코딩 교육 : 좌우 2개 항목 -->
-    <section>
+    <div class="section">
         <div class="wrapper">
             <header class="section-title">
                 <h3>wisoft</h3>
@@ -74,9 +68,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section>
+    <div class="section">
         <div class="wrapper">
             <div class="about">
                 <div class="msg">
@@ -104,11 +98,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- 교육 프로그램 : 한 줄에 여러 항목 -->
     <!--한줄에 썸네일이 여러개 안들어감 수정바람 미래의나~~-->
-    <section>
+    <div class="section">
         <div class="wrapper">
             <header class="section-title">
                 <h3>교육 프로그램</h3>
@@ -205,12 +199,12 @@
             <!--        </div>-->
 
         </div>
-    </section>
+    </div>
 </div>
 
 
 <!-- 푸터 -->
-<section class="footer">
+<div class="footer">
     <div class="wrapper">
         <div class="footer-info">
 
@@ -231,7 +225,7 @@
 
         </div>
     </div>
-</section>
+</div>
 
 <script src="js/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -249,6 +243,10 @@
     });
 
     $('.dropdown-toggle').dropdown();
+
+    $(document).ready(function () {
+        $("#fullpage").fullpage();
+    });
 
 </script>
 </body>

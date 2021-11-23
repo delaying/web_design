@@ -80,13 +80,13 @@ nav a#trigger {
 }
 
 /* 섹션 */
-section {
-  width: 100vw;
-  position: relative;
-}
-section:nth-child(odd) {
-  background-color: #f3f3f4;
-}
+/*.section {*/
+/*  width: 100vw;*/
+/*  position: relative;*/
+/*}*/
+/*.section:nth-child(odd) {*/
+/*  background-color: #f3f3f4;*/
+/*}*/
 .section-title {
   margin: 30px auto 50px auto;
 }
