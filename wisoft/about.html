@@ -1,11 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>about | wisoft.lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about | Wisoft.lab</title>
+
+    <link rel="stylesheet" href="css/wsstyle.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fullPage.css" rel="stylesheet">
+
 </head>
 <body>
-<h1>about입니당^^</h1>
 
+<!-- 내비게이션 -->
+<nav>
+    <ul>
+        <li>
+            <div class="navimage">
+                <a href="wisoft.html">
+                    <img src="image/wisoftlogo.png" width="50px" height="50px">
+                </a>
+            </div>
+
+        </li>
+
+        <li><a href="wisoft.html">home</a></li>
+        <li>
+            <a href="about.html">
+                <div class="dropdown">
+                    <a id="dLabel" data-target="#" href="about.html" data-toggle="dropdown"
+                       aria-haspopup="true" role="button" aria-expanded="false">about
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="about.html">information</a></li>
+                        <li><a href="about.html">contact</a></li>
+                        <li><a href="about.html">member</a></li>
+                    </ul>
+                </div>
+            </a>
+        </li>
+        <li><a href="seminar.html">seminar</a></li>
+        <li><a href="project.html">project</a></li>
+        <li><a href="service.html">service</a></li>
+    </ul>
+    <a href="#" id="trigger"><img src="image/wisoftlogo.png" width="50px" height="50px"></a>
+</nav>
+
+<!--풀페이지 만들기-->
+<div id="fullpage">
+
+    <div class="section">
+        <div class="wrapper">
+            <div id="information">
+                <header class="section-title">
+                    <h3>Information</h3>
+                </header>
+
+                <div class="text">
+                    <p>wisoft.lab</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrapper">
+            <div id="contact">
+                <header class="section-title">
+                    <h3>contact</h3>
+                </header>
+
+                <div class="text">
+                    <p>wisoft.lab</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrapper">
+            <div id="member">
+                <header class="section-title">
+                    <h3>member</h3>
+                </header>
+
+                <div class="text">
+                    <p>wisoft.lab</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- 푸터 -->
+<div class="footer">
+    <div class="wrapper">
+        <div class="footer-info">
+
+            <div class="contact">
+                <div class="footer-image">
+                    <a href="#"><img src="image/wisoftlogo.png" width="50px" height="50px"></a>
+                </div>
+                <div>
+                    <p> WiSoft.lab</p>
+                    <p> location, 한밭대학교 n5동 503호 무선통신소프트웨어연구실 </p>
+                    <p> contact, +82 042-821-1595 </p>
+                    <p> For more information, mail to 20171655@edu.hanbat.ac.kr </p>
+                </div>
+
+
+            </div>
+
+            <div class="copyright">
+                ⓒ Since 2021. Hanbat University wisoft Lab All Rights reserved.
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fullpage.js"></script>
+
+<script>
+    $(function () {
+        var trigger = $('#trigger');
+        var menu = $('nav ul');
+        $(trigger).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+    });
+
+    $('.dropdown-toggle').dropdown();
+
+    $(document).ready(function () {
+        $("#fullpage").fullpage();
+    });
+
+
+</script>
 </body>
 </html>

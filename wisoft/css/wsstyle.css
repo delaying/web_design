@@ -12,9 +12,9 @@
 }
 
 html {
-    position: relative;
+    /*position: relative;*/
     min-height: 100%;
-    margin: 0;
+    margin: 0px;
     padding: 0;
 }
 
@@ -62,13 +62,15 @@ nav ul li {
     font-weight: 200;
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: right;
     border-bottom: 1px solid #576979;
 }
 
-nav ul li a {
-    line-height: 50px;
+nav .navimage{
+    text-align: left;
+    margin-right: 200px;
 }
+
 
 nav a#trigger {
     display: block;
@@ -81,6 +83,7 @@ nav a#trigger {
 
 @media screen and (min-width: 764px) {
     nav {
+        max-width: 1800px;
         height: 0px;
         border-bottom: 2px solid rgba(52, 73, 94, 0);
         position: relative;
@@ -123,7 +126,7 @@ nav a#trigger {
 }
 
 
-.backimage {
+#fullpage .backimage {
     /*저장된 이미지는 안늘어남 고칠것!*/
     /*background-image: url('wisoft/image/stars1920.jpg');*/
     background-image: url("https://cdn.pixabay.com/photo/2017/08/10/00/40/stars-2616537_960_720.jpg");
@@ -135,6 +138,7 @@ nav a#trigger {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 /*배경위 글씨*/
 .backimage h2 {
@@ -202,21 +206,18 @@ nav a#trigger {
         opacity: 0.5;
     }
 }
-/* 섹션 */
-/*.section {*/
-/*  width: 100vw;*/
-/*  position: relative;*/
-/*}*/
-/*.section:nth-child(odd) {*/
-/*  background-color: #f3f3f4;*/
-/*}*/
+
+
+
+
 .section-title {
-    margin: 30px auto 50px auto;
+    margin: 10px auto 50px auto;
 }
 
 .section-title h3 {
-    font-size: 1.8em;
-    text-align: center;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 100px;
 }
 
 .wrapper {
@@ -226,7 +227,7 @@ nav a#trigger {
 
 @media screen and (min-width: 764px) {
     .wrapper {
-        max-width: 1300px;
+        max-width: 1500px;
         margin: 0 auto;
     }
 }
@@ -243,21 +244,6 @@ nav a#trigger {
     padding: 20px 50px;
 }
 
-.msg p {
-    color: #ff6600;
-    font-size: 1.4em;
-    font-style: italic;
-    text-align: center;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.msg span {
-    font-size: 0.9em;
-    color: #aaa;
-}
-
-/* 왜 코딩 교육? 영역 */
 .intro {
     padding: 20px 50px;
 }
@@ -390,29 +376,29 @@ nav ul li ul li {
 }
 
 
-/*!* 교육 프로그램 영역 *!*/
-/*.program-list {*/
-/*  padding: 20px 50px;*/
-/*}*/
-/*.program-list h4 {*/
-/*  font-size: 1.3em;*/
-/*  margin-bottom: 20px;*/
-/*}*/
-/*.program {*/
-/*  padding: 30px;*/
-/*  box-sizing: border-box;*/
-/*  margin-bottom: 20px;*/
-/*  background-color: #fff;*/
-/*  border: 1px solid #aaa;*/
-/*}*/
+/* 교육 프로그램 영역 */
+.program-list {
+  padding: 20px 50px;
+}
+.program-list h4 {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+.test {
+  padding: 30px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: rgba(120, 22, 255, 0.08);
+  border: 1px solid #aaa;
+}
 
-/*@media screen and (min-width: 764px) {*/
-/*  .program-list {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: space-around;*/
-/*  }*/
-/*  .program {*/
-/*    flex-basis: 30%;*/
-/*  }*/
-/*}*/
+@media screen and (min-width: 764px) {
+  .program-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .test {
+    flex-basis: 30%;
+  }
+}
