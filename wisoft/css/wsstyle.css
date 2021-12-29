@@ -315,6 +315,8 @@ nav a#trigger {
 
 .intro {
     padding: 20px 50px;
+    font-size: 1.3em;
+    margin-left: 20px;
 }
 
 .text {
@@ -525,181 +527,8 @@ nav ul li ul li {
 
 }
 
-/*카드이미지와 텍스트*/
 
-.card {
-    position: relative;
-    display: block;
-    width: 1000px;
-    height: 700px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 100px;
-    /*color: black;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    outline: none;
-    animation: slide-in 1s backwards;
-}
-.card:last-child {
-    animation-delay: 0.4s;
-}
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-}
-.card.dark {
-    color: white;
-}
-.card.dark::before {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6) 50%, transparent), linear-gradient(to top, #00001f, #3580ac);
-}
-.card::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6) 50%, transparent), linear-gradient(to bottom, #fff0e0, #ffcc99);
-    opacity: 0.1;
-    transition: 0.5s;
-}
-.card:hover::before, .card:focus::before {
-    opacity: 0.4;
-}
-
-.box {
-    width: 800px;
-    height: 400px;
-    padding: 30px;
-    position: relative;
-    font-size: 20px;
-    line-height: 1.6;
-    transition: 0.6s;
-    margin-bottom: 200px;
-    margin-left: 100px;
-}
-.card:hover .box, .card:focus .box {
-    transform: translateY(-20px);
-}
-
-.text {
-    margin: 0;
-    transform: scale(0.9);
-    transition: 0.5s;
-    text-align: justify;
-    font-size: 18px;
-}
-.card:hover .text, .card:focus .text {
-    transform: none;
-}
-
-.cite {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 100%);
-    transition: transform 0.2s 0.075s, letter-spacing 0.2s;
-    margin-bottom: 300px;
-}
-.card:hover .cite, .card:focus .cite {
-    transition-delay: 0.3s, 0.375s;
-    letter-spacing: 0.1em;
-    transform: translate(-50%, -20px);
-}
-
-.box::before, .box::after,
-.box-side-borders::before,
-.box-side-borders::after {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    transition: 0.5s 0.1s;
-    background: currentColor;
-}
-/*top-line 설정*/
-.box::before {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-}
-/*bottom-line 설정*/
-.box::after {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-}
-.card:hover .box::before, .card:focus .box::before {
-    width: 550px;
-    transform: translate(100px, calc(3.3em - .1em + 32px));
-}
-.card:hover .box::after, .card:focus .box::after {
-    width: 550px;
-    transform: translate(100px, calc(-3.5em - 30px));
-}
-
-.box-side-borders::before, .box-side-borders::after {
-    transition: height 0.5s 0.1s, transform 0.4s 0.2s ease-in-out;
-}
-
-/*lift-line 설정*/
-.box-side-borders::before {
-    bottom: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    transform-origin: bottom;
-}
-/*right-line설정*/
-.box-side-borders::after {
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    transform-origin: top;
-}
-.card:hover .box-side-borders::before, .card:hover .box-side-borders::after, .card:focus .box-side-borders::before, .card:focus .box-side-borders::after {
-    height: 550px;
-    transition: transform 0.5s 0.1s, height 0.3s 0.3s ease-in-out;
-}
-.card:hover .box-side-borders::before, .card:focus .box-side-borders::before {
-    transform: translate(100px, calc(-80px - 3.1em)) rotate(90deg);
-}
-.card:hover .box-side-borders::after, .card:focus .box-side-borders::after {
-    transform: translate(-150px, calc(80px + 4.9em)) rotate(90deg);
-}
-
-.card-image {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    left: 0;
-    width: 1000px;
-    height: 500px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    transform-origin: 80% 20%;
-    transition: 1s cubic-bezier(0.32, 0.16, 0, 1);
-    filter: brightness(1.3) contrast(0.8);
-    margin-left: 100px;
-    box-shadow: 0px 0px 10px 5px rgba(32, 39, 40, 0.84);
-}
-.card.dark .card-image {
-    filter: brightness(0.8) contrast(0.8);
-}
-.card:hover .card-image, .card:focus .card-image {
-    transform: scale(1.05);
-}
-
-/*그림카드 설정*/
+/* 메인 마지막 페이지 그림카드 설정*/
 .page-content {
     display: grid;
     grid-gap: 1rem;
@@ -762,7 +591,7 @@ nav ul li ul li {
     transition: transform calc(var(--d) * 2) var(--e);
 }
 .study-card:nth-child(1):before {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ieq-2n00khtgtWQseryuPJwq4W1rxy_uFg&usqp=CAU);
+    background-image: url(https://blog.kakaocdn.net/dn/mvAlv/btq6AsqwXJj/f1T2Mi99yN2SfY6jZZ7dG1/img.png);
 }
 .study-card:nth-child(2):before {
     background-image: url(https://res.cloudinary.com/practicaldev/image/fetch/s--rjxO02ux--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w4qxi1gsnhuey77654qj.png);
@@ -874,6 +703,7 @@ nav ul li ul li {
 
 .about-container {
     margin: 20px;
+    margin-top:100px;
 }
 .list {
     display: flex;
