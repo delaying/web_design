@@ -6,7 +6,7 @@
 
     MESSAGES.push({
         delay: 0,
-        text: "Incoming transmission..."
+        text: "현재 페이지는 준비중에 있습니다..."
     });
 
     MESSAGES.push({
