@@ -18,14 +18,14 @@
     <ul>
         <li>
             <div class="navimage">
-                <a href="wisoft.html">
+                <a href="index.html">
                     <img src="image/wisoftlogo.png" width="50px" height="50px">
                 </a>
             </div>
 
         </li>
 
-        <li><a href="wisoft.html">home</a></li>
+        <li><a href="index.html">home</a></li>
         <li>
             <a href="about.html">
                 <div class="dropdown">
@@ -34,9 +34,9 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li><a href="about.html">information</a></li>
-                        <li><a href="about.html">contact</a></li>
-                        <li><a href="about.html">member</a></li>
+                        <li><a href="about.html#information">information</a></li>
+                        <li><a href="about.html#contact">contact</a></li>
+                        <li><a href="about.html#member">member</a></li>
                     </ul>
                 </div>
             </a>
@@ -48,24 +48,64 @@
     <a href="#" id="trigger"><img src="image/wisoftlogo.png" width="50px" height="50px"></a>
 </nav>
 
-<!--풀페이지 만들기-->
-<div id="fullpage">
+<div class="about-text">
+    <div class="about-container">
+        <div class="list">
+            <article class="up-on-scroll">
+                We are dancing. We are extra dancing.<br> Try hard to achieve succeed. We will not try to go.
+                Try hard succeed. Indeed so. Some women cry.<br> This generator should succeed. This generator
+                should be used and succeed. We will not go. Try hard to achieve everything you can succeed.
+                We are extra cool everyday dancing. <br> We are extra cool everyday dancing. Try hard to achieve
+                everything you can succeed.<br> This generator should be used and succeed. Try hard to achieve
+                everything succeed. This generator should be used and succeed. We will not try to bow and
+                go. We are dancing.
+            </article>
+            <article class="up-on-scroll">
+                We are extra cool everyday dancing.<br> This generator should be used and succeed. We will not
+                try to go. We will not try to bow and go. Indeed so. Indeed so. This generator should
+                succeed.<br> Try hard to achieve everything you can succeed. This generator should be used and
+                succeed. Try hard to achieve everything succeed. We will not try to bow and go. We will not
+                try to bow and go. Indeed so. We are dancing. Indeed so. Some women should never cry. Some
+                women cry.<br> We are extra dancing. <br> We are extra cool everyday dancing. We will not try to
+                go.
+                Try hard succeed.
+            </article>
 
-    <div class="section">
-        <div class="service">
-            <div class="wrapper">
-
-                <header class="section-title">
-                    <h3>service</h3>
-                </header>
-
-                <div class="text">
-                    <p>wisoft.lab</p>
-                </div>
+            <div class="img-wrap">
+                <img src="https://images.unsplash.com/photo-1570760295437-3627311f8fbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2846&q=80"
+                     alt="img1" class="image up-on-scroll"/>
             </div>
+            <article class="up-on-scroll">
+                We are dancing. We are extra dancing. Try hard to achieve succeed. We will not try to go.
+                Try hard succeed. Indeed so. Some women cry. This generator should succeed. This generator
+                should be used and succeed. We will not go. Try hard to achieve everything you can succeed.
+                We are extra cool everyday dancing. We are extra cool everyday dancing. Try hard to achieve
+                everything you can succeed. This generator should be used and succeed. Try hard to achieve
+                everything succeed. This generator should be used and succeed. We will not try to bow and
+                go. We are dancing.
+            </article>
+            <article class="up-on-scroll">
+                We are extra cool everyday dancing.<br> This generator should be used and succeed. We will not
+                try to go. We will not try to bow and go. Indeed so. Indeed so. This generator should
+                succeed.<br> Try hard to achieve everything you can succeed. This generator should be used and
+                succeed. Try hard to achieve everything succeed. We will not try to bow and go. We will not
+                try to bow and go. Indeed so. We are dancing. Indeed so. Some women should never cry. Some
+                women cry.<br> We are extra dancing. <br> We are extra cool everyday dancing. We will not try to
+                go.
+                Try hard succeed.
+            </article>
+            <article class="up-on-scroll">
+                We are extra cool everyday dancing.<br> This generator should be used and succeed. We will not
+                try to go. We will not try to bow and go. Indeed so. Indeed so. This generator should
+                succeed.<br> Try hard to achieve everything you can succeed. This generator should be used and
+                succeed. Try hard to achieve everything succeed. We will not try to bow and go. We will not
+                try to bow and go. Indeed so. We are dancing. Indeed so. Some women should never cry. Some
+                women cry.<br> We are extra dancing. <br> We are extra cool everyday dancing. We will not try to
+                go.
+                Try hard succeed.
+            </article>
         </div>
     </div>
-
 </div>
 
 
@@ -115,6 +155,30 @@
     $(document).ready(function () {
         $("#fullpage").fullpage();
     });
+
+    //about-text 움직임효과
+    function isElementUnderBottom(elem, triggerDiff) {
+        const {top} = elem.getBoundingClientRect();
+        const {innerHeight} = window;
+        return top > innerHeight + (triggerDiff || 0);
+    }
+
+    function handleScroll() {
+        const elems = document.querySelectorAll('.up-on-scroll');
+        elems.forEach(elem => {
+            if (isElementUnderBottom(elem, -20)) {
+                elem.style.opacity = "0";
+                elem.style.transform = 'translateY(70px)';
+
+            } else {
+                elem.style.opacity = "1";
+                elem.style.transform = 'translateY(0px)';
+
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
 
 
 </script>
